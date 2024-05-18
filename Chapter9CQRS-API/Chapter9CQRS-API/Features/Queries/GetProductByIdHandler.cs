@@ -1,8 +1,7 @@
-﻿using Chapter9CQRS_API.Features.Queries;
-using Chapter9CQRS_API.Models;
+﻿using Chapter9CQRS_API.Models;
 using MediatR;
 
-namespace Chapter9CQRS_API.Features;
+namespace Chapter9CQRS_API.Features.Queries;
 
 public class GetProductByIdHandler
     : IRequestHandler<GetProductByIdQuery, Product>

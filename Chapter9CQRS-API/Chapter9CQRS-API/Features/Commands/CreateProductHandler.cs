@@ -1,9 +1,8 @@
-﻿using Chapter9CQRS_API.Features.Commands;
-using MediatR;
+﻿using MediatR;
 
-namespace Chapter9CQRS_API.Features;
+namespace Chapter9CQRS_API.Features.Commands;
 
-public class CreateProductHandler 
+public class CreateProductHandler
     : IRequestHandler<CreateProductCommand, int>
 {
     public Task<int> Handle(
