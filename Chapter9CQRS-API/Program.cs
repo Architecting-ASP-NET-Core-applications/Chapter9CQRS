@@ -16,6 +16,7 @@ builder.Services.AddMediatR(cfg => cfg
 builder.Services.AddMediatR(cfg => cfg
     .RegisterServicesFromAssembly(
         typeof(GetProductByIdHandler).Assembly));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -33,6 +34,7 @@ app.MapGet("/GetProduct/{id}", async (int id, IMediator mediator) =>
 })
 .WithName("GetProduct")
 .WithOpenApi();
+
 // Post endpoint
 app.MapPost("/PostProduct", async ([FromBody] CreateProductCommand command, IMediator mediator) =>
 {
